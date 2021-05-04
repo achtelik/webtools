@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Base64 Encoder/Decoder</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .pageContainer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: 0px 8px;
+      }
+
+      .inputAreaContainer {
+        display: flex;
+        flex: 1;
+      }
+      .inputAreaContainer textarea {
+        flex: 1;
+      }
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+      }
+      .buttonContainer button {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pageContainer">
+      <h1>Base64 En-/Decoder</h1>
+      <div class="inputAreaContainer">
+        <textarea id="decodeBase64" class="inputTextarea"></textarea>
+      </div>
+      <div class="buttonContainer">
+        <button
+          onclick="encode(document.getElementById('decodeBase64'), document.getElementById('encodeBase64'))"
+        >
+          Encode &darr;
+        </button>
+        <button
+          onclick="decode(document.getElementById('encodeBase64'), document.getElementById('decodeBase64'))"
+        >
+          Decode &uarr;
+        </button>
+      </div>
+      <div class="inputAreaContainer">
+        <textarea id="encodeBase64" class="inputTextarea"></textarea>
+      </div>
+    </div>
+
+    <script>
+      function encode(inputElement, outputElement) {
+        outputElement.value = btoa(inputElement.value);
+      }
+
+      function decode(inputElement, outputElement) {
+        outputElement.value = atob(inputElement.value);
+      }
+    </script>
+  </body>
+</html>

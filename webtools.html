@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Webtools</title>
+    <style>
+        .grid-container {
+            display: flex;
+        }
+
+        .tool-link {
+            color: inherit; /* blue colors for links too */
+            text-decoration: inherit; /* no underline */
+        }
+
+        .tool-container {
+            border: 1px solid #424242;
+            border-radius: 8px;
+            padding: 8px;
+        }
+        .tool-container:hover {
+            background-color: #E0E0E0;
+        }
+    </style>
+</head>
+<body>
+<div class="pageContainer">
+    <h1>Webtools</h1>
+    <div class="grid-container">
+        <a class="tool-link" href="base64-en-decoder.html">
+            <div class="tool-container">
+                <h2>Base64 En-/Decoder</h2>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    function open(filename) {
+        window.open("./" + filename);
+    }
+</script>
+</body>
+</html>
